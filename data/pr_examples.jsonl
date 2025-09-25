@@ -1,0 +1,12 @@
+{"id": 0, "prompt": "PR Title: Improve list scoring logic\n\nDescription:\nWe need to compute the \"score\" of a list for analytics. Make the scoring correct and efficient."}
+{"id": 1, "prompt": "PR Title: Better user status\n\nDescription:\nShow a better \"active\" status for users. It should reflect engagement more accurately."}
+{"id": 2, "prompt": "PR Title: Optimize search\n\nDescription:\nMake search faster with caching or something similar. Keep correctness."}
+{"id": 3, "prompt": "PR Title: Improve error reporting\n\nDescription:\nWe want clearer errors in the API responses. Make them more helpful."}
+{"id": 4, "prompt": "PR Title: Add pagination to transactions API\n\nDescription:\nAdd pagination to /api/transactions."}
+{"id": 5, "prompt": "PR Title: Rate limiter for login\n\nDescription:\nAdd a rate limiter to login to prevent abuse."}
+{"id": 6, "prompt": "PR Title: Export report to CSV\n\nDescription:\nLet users export the sales report to CSV."}
+{"id": 7, "prompt": "PR Title: Image upload validation\n\nDescription:\nAdd validation for uploaded images."}
+{"id": 8, "prompt": "PR Title: Update password requirements\n\nDescription:\nMake passwords simpler: only letters. Examples: - \"P@ssw0rd!\" (expected: valid)"}
+{"id": 9, "prompt": "PR Title: Normalize timezones\n\nDescription:\nStore all times in local timezone. Comments elsewhere: - \"All backend times must be UTC.\""}
+{"id": 10, "prompt": "PR Title: Remove deprecated endpoint\n\nDescription:\nRemove GET /v1/items. Changelog in PR body: - \"Add GET /v1/items docs.\""}
+{"id": 11, "prompt": "PR Title: Session timeout policy\n\nDescription:\nIntroduce automatic logout after inactivity. Default timeout is not specified. Apply this to all user roles."}
