@@ -1,0 +1,26 @@
+id	pr_title	answers
+0	Improve list scoring logic	"A1: Treat a “unique element” as a distinct value after canonicalization (trim/normalize casing and numeric type). Duplicates count once toward uniqueness.
+A2: Include negative numbers and zero; uniqueness is value-based, not sign-restricted. Ensure type-stable comparisons (e.g., -0 vs 0 collapse to 0)."
+1	Better user status	"A1: Current “active” = last activity event within 5 minutes (page view or API call). 
+A2: New “better active” = weighted engagement in last 24h (views=1, comments=3, posts=5, reactions=0.5) with decay; threshold score ≥ 3 and at least one event in last hour."
+2	Optimize search	"A1: Current p50 ≈ 180 ms, p95 ≈ 900 ms at peak; timeouts at 3 s; error rate < 0.5%. 
+A2: Null or empty term → 400 with message “query is required”; no wildcard list-all. Allow explicit `*` only for admins."
+3	Improve error reporting	"A1: `error_code` is a stable, machine-readable enum for programmatic handling and monitoring. 
+A2: `error_message` is human-readable, localized where applicable; not guaranteed stable for parsing."
+4	Add pagination to transactions API	"A1: Default `limit=50`, max `limit=200`, server-enforced; provide `next_cursor` for forward pagination. 
+A2: Default sort `-created_at`; allow `created_at` and `amount` with `order=asc|desc`; tie-break on `id`."
+5	Rate limiter for login	"A1: 5 failed attempts per 15-minute rolling window per (IP, account); soft challenge (captcha) after 3. 
+A2: Window = rolling 15 minutes; hard lockout 15 minutes after limit hit; reset on successful login."
+6	Export report to CSV	"A1: CSV = UTF-8, RFC4180, header row, comma delimiter, `""` escape; timestamps ISO-8601 UTC; decimals `.`. 
+A2: Name `sales_report_{YYYYMMDD}_{HHmm}_UTC.csv`; store to S3 `s3://reports/sales/`, 7-day retention; downloadable via signed URL (15 min TTL)."
+7	Image upload validation	"A1: Max 5 MB per image; reject larger with clear error. 
+A2: Accept JPEG, PNG, WebP; reject SVG for security; min dimensions 256×256 px; auto-strip metadata server-side.
+"
+8	Update password requirements	"A1: Simplify by removing composition classes; require length and entropy checks. Block top N breached/common passwords. 
+A2: Minimum length = 12 characters; allow any printable characters."
+9	Normalize timezones	"A1: Purpose: standardize all persisted timestamps to UTC to avoid drift and DST bugs. 
+A2: Outcome: DB writes/reads in UTC; clients display in local TZ; migration backfills legacy fields to UTC with one-time script."
+10	Remove deprecated endpoint	"A1: Replacement endpoint `/v2/items` with pagination and filter support; `/v1/items` returns 410 Gone. 
+A2: Changelog: mark breaking change under “Removed”; add “Added/Changed” for `/v2/items`; include migration notes and example requests."
+11	Session timeout policy	"A1: Default inactivity timeout = 30 minutes; show a warning modal 2 minutes before auto-logout. 
+A2: Apply across roles: Standard users 30 min; Admins 15 min; Service accounts/session tokens used for automation are exempt but must use short-lived tokens with refresh."

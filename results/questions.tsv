@@ -1,0 +1,25 @@
+id	pr_title	clarify_questions
+0	Improve list scoring logic	"Q1: What is the definition of a ""unique element""? Is it the same as a distinct item in the list? Or does it have to be unique within the context of the list?
+Q2: How should we handle lists with negative numbers or zeroes? Should they be considered unique or not?"
+1	Better user status	"Q1: What is the current definition of ""active"" status?
+Q2: How should we define the new ""better active"" status?"
+2	Optimize search	"Q1: What is the current performance of the search function?
+Q2: How should we handle edge cases, like when the search term is empty or null?"
+3	Improve error reporting	"Q1: What is the purpose of the `error_code` field?
+Q2: What is the purpose of the `error_message` field?"
+4	Add pagination to transactions API	"Q1: What is the maximum number of transactions per page?
+Q2: How should we handle sorting and ordering of transactions?"
+5	Rate limiter for login	"Q1: What is the maximum number of failed login attempts allowed per IP address within a time period?
+Q2: What is the time period for which the limit should be enforced?"
+6	Export report to CSV	"Q1: What is the format of the CSV file?
+Q2: How should the CSV file be named and stored?"
+7	Image upload validation	"Q1: What is the maximum allowed file size for uploaded images?
+Q2: What are the accepted formats for uploaded images?"
+8	Update password requirements	"Q1: What is the expected behavior of this PR?
+Q2: What is the minimum length of the password?"
+9	Normalize timezones	"Q1: What is the purpose of this PR?
+Q2: What is the expected outcome of this PR?"
+10	Remove deprecated endpoint	"Q1: What is the new functionality of the API?
+Q2: How should this be documented in the changelog?"
+11	Session timeout policy	"Q1: What is the default session timeout policy?
+Q2: How should we apply this change across all user roles?"
