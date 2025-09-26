@@ -116,6 +116,21 @@ git clone https://github.com/saraswati-niroula/clarify-pr-review.git
 cd clarify-pr-review
 pip install -r requirements.txt
 ```
+### Configure API Key
+The reviewer scripts use the Gemini API via the `google-generativeai` package.  
+Before running any scripts, set your API key as an environment variable:
+
+```bash
+export GEMINI_API_KEY="your_api_key_here"
+```
+
+For Windows (PowerShell):
+
+```powershell
+$env:GEMINI_API_KEY="your_api_key_here"
+```
+
+Make sure your key has access to the Gemini model family.
 
 Dependencies include:
 - `transformers`
