@@ -1,6 +1,6 @@
 # Clarify-PR-Review
 
-This repository contains the implementation and experiments for our assignment on **clarifying questions in pull request (PR) reviews**, inspired by [ClarifyCoder](https://arxiv.org/pdf/2504.16331).
+This repository contains the implementation and experiments for **clarifying questions in pull request (PR) reviews**, inspired by [ClarifyCoder](https://arxiv.org/pdf/2504.16331).
 
 ---
 
@@ -64,6 +64,8 @@ clarify-pr-review/
 6. **Reporting**  
    - Results and discussion are written in `report/report.tex` (IEEE format).  
    - Final PDF is included as `report/report.pdf`.
+   - [Read the full report (PDF)](report/report.pdf)
+
 
 ---
 
@@ -71,7 +73,7 @@ clarify-pr-review/
 
 - **Specificity (1–5)** – how concrete the review is.  
 - **Actionability (1–5)** – how easy it is to act on.  
-- **Assumption Rate (0–100%)** – amount of speculation.  
+- **Assumption Identified (count)** – number of implicit assumptions surfaced explicitly in the review.
 - **Comment Quality (1–5)** – overall usefulness.  
 - **Suggestions (count)** – number of distinct actionable suggestions.
 
