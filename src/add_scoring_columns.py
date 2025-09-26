@@ -8,7 +8,7 @@ DST = BASE / "results" / "eval_scored.tsv"
 new_fields = [
     "specificity_baseline", "specificity_clarified",
     "actionability_baseline", "actionability_clarified",
-    "assumption_rate_baseline", "assumption_rate_clarified",
+    "assumption_identification_baseline", "assumption_identification_clarified",
     "comment_quality_baseline", "comment_quality_clarified",
     "suggestions_baseline", "suggestions_clarified",
 ]

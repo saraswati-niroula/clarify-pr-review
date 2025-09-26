@@ -1,4 +1,4 @@
-id	pr_title	specificity_baseline	specificity_clarified	actionability_baseline	actionability_clarified	assumption_rate_baseline	assumption_rate_clarified	comment_quality_baseline	comment_quality_clarified	suggestions_baseline	suggestions_clarified	specificity_baseline	specificity_clarified	actionability_baseline	actionability_clarified	assumption_rate_baseline
+id	pr_title	specificity_baseline	specificity_clarified	actionability_baseline	actionability_clarified	assumption_identification_baseline	assumption_identification_clarified	comment_quality_baseline	comment_quality_clarified	suggestions_baseline	suggestions_clarified	specificity_baseline	specificity_clarified	actionability_baseline	actionability_clarified	assumption_identification_baseline
 0	Improve list scoring logic.	3	4	4	5	0	0	4	5	2	5	3	4	4	5	0
 1	Better user status.	3	5	3	5	0	12	3	5	1	4	3	5	3	5	0
 2	Optimize search.	4	5	4	5	0	0	4	5	2	8	4	5	4	5	0

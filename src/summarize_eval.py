@@ -11,7 +11,7 @@ DEFAULT_OUTPUT = BASE / "results" / "eval_summary.tsv"
 CORE_FIELDS = [
     ("specificity_baseline", float), ("specificity_clarified", float),
     ("actionability_baseline", float), ("actionability_clarified", float),
-    ("assumption_rate_baseline", float), ("assumption_rate_clarified", float),
+    ("assumption_identification_baseline", float), ("assumption_identification_clarified", float),
     ("comment_quality_baseline", float), ("comment_quality_clarified", float),
     ("suggestions_baseline", float), ("suggestions_clarified", float),
 ]
@@ -71,8 +71,8 @@ def main():
         "delta_actionability": means["actionability_clarified"] - means["actionability_baseline"] if not any(
             math.isnan(means[x]) for x in ("actionability_clarified","actionability_baseline")
         ) else math.nan,
-        "delta_assumption_rate": means["assumption_rate_clarified"] - means["assumption_rate_baseline"] if not any(
-            math.isnan(means[x]) for x in ("assumption_rate_clarified","assumption_rate_baseline")
+        "delta_assumption_identification": means["assumption_identification_clarified"] - means["assumption_identification_baseline"] if not any(
+            math.isnan(means[x]) for x in ("assumption_identification_clarified","assumption_identification_baseline")
         ) else math.nan,
         "delta_comment_quality": means["comment_quality_clarified"] - means["comment_quality_baseline"] if not any(
             math.isnan(means[x]) for x in ("comment_quality_clarified","comment_quality_baseline")
@@ -90,8 +90,8 @@ def main():
         "specificity_clarified_mean": means["specificity_clarified"],
         "actionability_baseline_mean": means["actionability_baseline"],
         "actionability_clarified_mean": means["actionability_clarified"],
-        "assumption_rate_baseline_mean": means["assumption_rate_baseline"],  # 0-100 scale
-        "assumption_rate_clarified_mean": means["assumption_rate_clarified"],
+        "assumption_identification_baseline_mean": means["assumption_identification_baseline"],  # 0-100 scale
+        "assumption_identification_clarified_mean": means["assumption_identification_clarified"],
         "comment_quality_baseline_mean": means["comment_quality_baseline"],
         "comment_quality_clarified_mean": means["comment_quality_clarified"],
         "suggestions_baseline_mean": means["suggestions_baseline"],
@@ -111,7 +111,7 @@ def main():
         print(f"n_samples\t{summary_row['n_samples']}")
         print(f"specificity (base/clar)\t{summary_row['specificity_baseline_mean']:.2f}\t{summary_row['specificity_clarified_mean']:.2f}\tΔ={summary_row['delta_specificity']:.2f}")
         print(f"actionability (base/clar)\t{summary_row['actionability_baseline_mean']:.2f}\t{summary_row['actionability_clarified_mean']:.2f}\tΔ={summary_row['delta_actionability']:.2f}")
-        print(f"assumption% (base/clar)\t{summary_row['assumption_rate_baseline_mean']:.1f}\t{summary_row['assumption_rate_clarified_mean']:.1f}\tΔ={summary_row['delta_assumption_rate']:.1f}")
+        print(f"assumption% (base/clar)\t{summary_row['assumption_identification_baseline_mean']:.1f}\t{summary_row['assumption_identification_clarified_mean']:.1f}\tΔ={summary_row['delta_assumption_identification']:.1f}")
         print(f"comment_quality (base/clar)\t{summary_row['comment_quality_baseline_mean']:.2f}\t{summary_row['comment_quality_clarified_mean']:.2f}\tΔ={summary_row['delta_comment_quality']:.2f}")
         print(f"suggestions (base/clar)\t{summary_row['suggestions_baseline_mean']:.2f}\t{summary_row['suggestions_clarified_mean']:.2f}\tΔ={summary_row['delta_suggestions']:.2f}")
         print(f"\nWrote summary -> {outp}")
